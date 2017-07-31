@@ -9,7 +9,7 @@ gotRoutes.post('/', gotController.create);
 
 gotRoutes.get('/add', (req, res) => {
   res.render('got/got-add', {
-    currentPage: 'add'.
+    currentPage: 'add',
   });
 });
 
