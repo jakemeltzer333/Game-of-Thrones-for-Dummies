@@ -1,4 +1,19 @@
 <% include ../partials/boilerplate %>
-
+<div class = 'got-container'>
+  <h1 class = 'header'>Character List</h1>
+  <div class = 'got'>
+    <% for (let got of data) { %>
+        <h2 class = 'name'><%= got.name %></h2>
+        <h2 class = 'house'>House <%= got.house %></h2>
+        <h2 class = 'actor'><%= got.actor_name %></h2>
+        <form class = 'delete' method = 'POST' action = '/got/<%= got.id %>?_method=DELETE'>
+          <input class = 'remove' type='submit' value='Delete (Valar Morghulis)'>
+        </form>
+   <% } %>
+  </div>
+    <a class = 'add' href='/got/add'>Add New Character</a>
+    <a class = 'logout' href='auth/logout'>Until Next Time. The Night
+    is Dark and Full of Terrors</a>
+</div>
 
 <% include ../partials/end %>
