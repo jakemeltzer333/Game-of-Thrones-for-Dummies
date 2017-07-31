@@ -101,3 +101,7 @@ VALUES
 (character_name, house, actor_name)
 
 ### Want ability to alter the GoT table based on which information the user wants   
+
+## Resources
+
+API I'm planning on using: https://anapioficeandfire.com/
