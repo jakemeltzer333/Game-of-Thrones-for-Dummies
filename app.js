@@ -26,7 +26,7 @@ app.listen(port, () => {
 
 app.get('/', (req,res) => {
   res.render('index', {
-    message: 'hello world',
+    message: 'Game of Thrones For Dummies',
     currentPage: 'home',
     documentTitle: 'Game of Thrones For Dummies',
   });
