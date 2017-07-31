@@ -1,4 +1,4 @@
-# Game of Thrones For Dummies (or Cliffnotes. Still unsure which is more approrpiate branding)
+# Game of Thrones For Dummies (or Cliffnotes. Still unsure which is more appropriate branding)
 
 ## What is Game of Thrones for Dummies?
 
@@ -39,12 +39,15 @@ protected and they can keep their knowledge (or lack thereof) private.
 ![got-add](./project2wireframes/IMG_0811.JPG)
 
 ## Database structure
+CREATE TABLE users
+VALUES
+(id, username, email, password_digest)
 
-USER TABLE VALUES
-(userid, username, email, password_digest)
+ALTER TABLE GoT
+ADD COLUMN user_id INTEGER REFERENCES users(id);
 
 CREATE TABLE GoT
 VALUES
-(id, character_name, house, actor_name)
+(character_name, house, actor_name)
 
 ### Want ability to alter the GoT table based on which information the user wants   
