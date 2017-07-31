@@ -38,6 +38,56 @@ protected and they can keep their knowledge (or lack thereof) private.
 ### Add a character, house to your list
 ![got-add](./project2wireframes/IMG_0811.JPG)
 
+## Initial Thought on App Structure
+
+One of the things I want to be able to do is make the main data table change
+based on what information the user wants. The API is a bit limited in terms of what
+information it can call and which information is available for each character or house,
+but for basics, which is what I'm going for here, it can get the job done.
+
+In that spirit, when it comes to editing data, I would like to be able have users
+be able to add things they want. For example, if a user has an entry for Jon Snow that
+says he's from House Stark, they could get other information, such as when he was born
+or the name of the actor who plays him on the show or which seasons of the show he's in.
+
+## Phases of Completion
+
+### Phase 0
+
+Set up file structure for the app without auth and create databases.
+
+### Phase 1
+
+Have main index page of info user wants appear with add and delete functionality.
+Each piece of info have its own div and link to an edit page.
+
+### Phase 2
+
+Link the API to the app
+
+### Phase 3
+
+Create edit functionality that will allow the user to add information to existing
+entries in their list. The screen will prompt which type of information the user wants to
+add based on the entry retrieved from the API. For example, if the user wants to know Jon
+Snow's father, when they retrieve that information, they won't receive anything because
+that information is not confirmed (even for those R+L=J truthers out there).
+
+### Phase 4
+
+Enable authentication that will allow each user to customize their own list of characters
+they want to keep track of at any given time. Create a home screen that will direct users to
+register and login pages. Create those register and login pages, which will direct the user
+to their list.
+
+### Phase 5
+
+Style the app with CSS.
+
+### Phase 6
+
+Deploy to Heroku and hope for the best.
+
 ## Database structure
 CREATE TABLE users
 VALUES
