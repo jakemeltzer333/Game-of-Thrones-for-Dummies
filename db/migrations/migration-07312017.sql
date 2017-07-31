@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS got (
   id SERIAL PRIMARY KEY,
-  character_name VARCHAR(255),
+  name VARCHAR(255),
   house VARCHAR(255),
   actor_name VARCHAR(255)
 )
