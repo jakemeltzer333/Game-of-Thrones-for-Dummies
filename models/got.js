@@ -3,13 +3,17 @@ const db = require('../db/config');
 const Got= {};
 
 Got.findAll = () => {
-  return db.query('SELECT * FROM got ORDER BY id');
+  return db.query(`
+    SELECT * FROM got
+    JOIN info ON got.id = info.got_id
+    ORDER BY got.id ASC`);
 }
 
 Got.findById = (id) => {
   return db.one(`
   SELECT * FROM got
-  WHERE id = $1
+  JOIN info ON got.id = info.got_id
+  WHERE got.id = $1
     `, [id]);
 }
 
