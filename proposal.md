@@ -41,7 +41,7 @@ protected and they can keep their knowledge (or lack thereof) private.
 ## Database structure
 
 USER TABLE VALUES
-(userid, username, email, password)
+(userid, username, email, password_digest)
 
 CREATE TABLE GoT
 VALUES
