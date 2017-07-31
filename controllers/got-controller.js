@@ -5,14 +5,14 @@ const gotController = {};
 gotController.index = (req, res) => {
   Got.findAll()
     .then(got => {
-      let userGot = got.filter((got) => {
-        return got.user_id === req.user.id;
-      });
+      // let userGot = got.filter((got) => {
+      //   return got.user_id === req.user.id;
+      // });
       res.render('got/got-index', {
         currentPage: 'index',
         message: 'ok',
-        data: userGot,
-        user: req.user,
+        data: got,
+        //user: req.user,
       });
     }).catch(err => {
       console.log(err);
