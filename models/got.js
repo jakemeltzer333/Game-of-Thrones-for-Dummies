@@ -22,6 +22,17 @@ Got.create = (got) => {
     `, [got.name, got.house, got.actor_name]);
 }
 
+Got.update = (got, id) => {
+  return db.one(`
+  UPDATE got SET
+  name = $1,
+  house = $2,
+  actor_name = $3
+  WHERE id = $4
+  RETURNING *
+    ` [got.name, got.house, got.actor_name, id]);
+}
+
 Got.destroy = (id) => {
   return db.none(`
   DELETE FROM got
