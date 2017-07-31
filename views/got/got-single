@@ -1,0 +1,15 @@
+<% include ../partials/boilerplate %>
+<div class = 'got-single-container'>
+  <div class = 'got-single'>
+    <h2 class = 'single-name'><%= data.name %> </h2>
+  <div class ='links-edit'>
+    <a href='/got/<%= data.id %>/edit'>Edit Character Traits</a>
+  </div>
+  <div class = 'linkback'>
+    <a class ='seeall' href='/got'>See All Characters</a>
+  </div>
+  </div>
+</div>
+
+
+<% include ../partials/end %>
