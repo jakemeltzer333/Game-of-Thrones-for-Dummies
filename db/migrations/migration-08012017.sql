@@ -17,7 +17,6 @@ CREATE TABLE IF NOT EXISTS got (
 
 CREATE TABLE IF NOT EXISTS info (
   id SERIAL PRIMARY KEY,
-  info_title VARCHAR(255),
   info_info VARCHAR(255),
   char_id INTEGER REFERENCES got(id)
 );
