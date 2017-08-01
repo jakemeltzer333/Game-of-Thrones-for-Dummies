@@ -5,7 +5,7 @@ function setDatabase () {
     return pgp({
       database: 'got_info_dev',
       port: 5432,
-      host: 'locahost',
+      host: 'localhost',
     });
   } else if (process.env.NODE_ENV === 'production') {
     return pgp(process.env.DATABASE_URL);

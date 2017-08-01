@@ -5,14 +5,14 @@ const gotController = {};
 gotController.index = (req, res) => {
   Got.findAll()
     .then(got => {
-      // let userGot = got.filter((got) => {
-      //   return got.user_id === req.user.id;
-      // });
+      let userGot = got.filter((got) => {
+        return got.user_id === req.user.id;
+      });
       res.render('got/got-index', {
         currentPage: 'index',
         message: 'ok',
-        data: got,
-        //user: req.user,
+        data: userGot,
+        user: req.user,
       });
     }).catch(err => {
       console.log(err);
@@ -39,7 +39,7 @@ gotController.create = (req, res) => {
     name: req.body.name,
     house: req.body.house,
     actor_name: req.body.actor_name,
-  }).then(() => {
+  }, req.user.id).then(() => {
     res.redirect('/got');
   }).catch(err => {
     console.log(err);
