@@ -10,8 +10,6 @@ CREATE TABLE IF NOT EXISTS users (
 CREATE TABLE IF NOT EXISTS got (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
-  house VARCHAR(255),
-  actor_name VARCHAR(255),
   user_id INTEGER REFERENCES users(id)
 );
 

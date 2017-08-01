@@ -5,8 +5,6 @@
 
     <% for (let got of data) { %>
         <h2 class = 'name'><%= got.name %></h2>
-        <h2 class = 'house'>House <%= got.house %></h2>
-        <h2 class = 'actor'><%= got.actor_name %></h2>
         <form class = 'delete' method = 'POST' action = '/got/<%= got.id %>?_method=DELETE'>
           <input class = 'remove' type='submit' value='Delete (Valar Morghulis)'>
         </form>

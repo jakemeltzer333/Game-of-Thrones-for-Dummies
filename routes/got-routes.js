@@ -1,7 +1,8 @@
 const express = require('express');
 const gotRoutes = express.Router();
 const authHelpers = require('../services/auth/auth-helpers');
-
+//const gotModel = require('../models/got');
+//const asoaif =require('asoiaf-api');
 const gotController = require('../controllers/got-controller');
 
 gotRoutes.get('/', authHelpers.loginRequired, gotController.index);
