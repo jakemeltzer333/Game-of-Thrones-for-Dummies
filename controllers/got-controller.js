@@ -8,10 +8,11 @@ gotController.index = (req, res) => {
       let userGot = got.filter((got) => {
         return got.user_id === req.user.id;
       });
+      console.log(userGot);
       res.render('got/got-index', {
         currentPage: 'index',
         message: 'ok',
-        data: userGot,
+        data: got,
         user: req.user,
       });
     }).catch(err => {

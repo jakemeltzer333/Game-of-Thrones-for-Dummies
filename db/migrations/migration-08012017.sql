@@ -1,3 +1,5 @@
+\c got_info_dev
+
 CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
   username VARCHAR(255) UNIQUE NOT NULL,
@@ -9,11 +11,9 @@ CREATE TABLE IF NOT EXISTS got (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   house VARCHAR(255),
-  actor_name VARCHAR(255)
+  actor_name VARCHAR(255),
+  user_id INTEGER REFERENCES users(id)
 );
-
-ALTER TABLE got
-ADD COLUMN user_id INTEGER REFERENCES users(id);
 
 CREATE TABLE IF NOT EXISTS info (
   id SERIAL PRIMARY KEY,

@@ -1,21 +1,21 @@
 const express = require('express');
 const gotRoutes = express.Router();
-
+const authHelpers = require('../services/auth/auth-helpers');
 
 const gotController = require('../controllers/got-controller');
 
-gotRoutes.get('/', gotController.index);
-gotRoutes.post('/', gotController.create);
+gotRoutes.get('/', authHelpers.loginRequired, gotController.index);
+gotRoutes.post('/', authHelpers.loginRequired, gotController.create);
 
-gotRoutes.get('/add', (req, res) => {
+gotRoutes.get('/add', authHelpers.loginRequired, (req, res) => {
   res.render('got/got-add', {
     currentPage: 'add',
   });
 });
 
-gotRoutes.get('/:id', gotController.show);
-gotRoutes.get('/:id/edit', gotController.edit);
-gotRoutes.put('/:id', gotController.update);
-gotRoutes.delete('/:id', gotController.delete);
+gotRoutes.get('/:id', authHelpers.loginRequired, gotController.show);
+gotRoutes.get('/:id/edit', authHelpers.loginRequired, gotController.edit);
+gotRoutes.put('/:id', authHelpers.loginRequired, gotController.update);
+gotRoutes.delete('/:id', authHelpers.loginRequired, gotController.delete);
 
 module.exports = gotRoutes;
