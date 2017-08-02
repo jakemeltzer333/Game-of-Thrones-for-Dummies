@@ -4,7 +4,7 @@ const User = require('../models/user.js');
 const usersController = {};
 
 usersController.index = (req, res) => {
-  User.findUserGot(req.user.id)
+  User.findByUserId(req.user.id)
     .then(got => {
       res.redirect('/got');
     }).catch(err => {

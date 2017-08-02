@@ -18,10 +18,10 @@ User.create = user => {
     `, [user.username, user.email, user.password_digest]);
 };
 
-User.findUserGot = id => {
-  return db.manyOrNone(`
-    SELECT * FROM got
-    WHERE user_id = $1
+User.findByUserId = id => {
+  return db.one(`
+    SELECT * FROM users
+    WHERE id = $1
     `, [id]);
 };
 
