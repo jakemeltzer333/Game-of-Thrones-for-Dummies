@@ -1,0 +1,102 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.got-login-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.title {
+  display: flex;
+}
+
+.message {
+  font-size: 40px;
+  padding: 10px;
+}
+
+.login {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.got-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.header {
+  font-size: 40px;
+  padding: 10px;
+}
+
+.name {
+  font-size: 30px;
+}
+
+.delete {
+  font-size: 20px;
+  padding: 15px;
+}
+
+.add {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.logout {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.add-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+input {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+footer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+}
