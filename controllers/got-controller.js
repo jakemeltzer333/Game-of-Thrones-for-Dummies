@@ -22,8 +22,10 @@ gotController.index = (req, res) => {
 };
 
 gotController.show = (req, res) => {
-  Got.findById(req.params.id)
+
+  Got.findByUserId(req.params.id)
     .then(got => {
+
       res.render('got/got-single', {
         currentPage: 'show',
         message: 'ok',
@@ -36,10 +38,9 @@ gotController.show = (req, res) => {
 };
 
 gotController.create = (req, res) => {
+  console.log('inside create controller ', req.user.id)
   Got.create({
     name: req.body.name,
-    house: req.body.house,
-    actor_name: req.body.actor_name,
   }, req.user.id).then(() => {
     res.redirect('/got');
   }).catch(err => {
@@ -51,24 +52,9 @@ gotController.create = (req, res) => {
 gotController.update = (req, res) => {
   Got.update({
     name: req.body.name,
-    house: req.body.house,
-    actor_name: req.body.actor_name,
   }).then (got => {
     res.redirect(`/got/${req.params.id}`);
   }).catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  });
-}
-
-gotController.edit = (req, res) => {
-  Got.findById(req.params.id)
-    .then(got => {
-      res.render('got/got-single-edit', {
-        currentPage: 'edit',
-        data: info,
-      });
-    }).catch(err => {
     console.log(err);
     res.status(500).json(err);
   });

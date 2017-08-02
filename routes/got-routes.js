@@ -15,7 +15,7 @@ gotRoutes.get('/add', authHelpers.loginRequired, (req, res) => {
 });
 
 gotRoutes.get('/:id', authHelpers.loginRequired, gotController.show);
-gotRoutes.get('/:id/edit', authHelpers.loginRequired, gotController.edit);
+//gotRoutes.get('/:id/edit', authHelpers.loginRequired, gotController.edit);
 gotRoutes.put('/:id', authHelpers.loginRequired, gotController.update);
 gotRoutes.delete('/:id', authHelpers.loginRequired, gotController.delete);
 

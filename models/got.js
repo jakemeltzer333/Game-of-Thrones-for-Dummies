@@ -20,13 +20,20 @@ Got.findById = (id) => {
     `, [id]);
 }
 
+Got.findByUserId = (user_id) => {
+  return db.one(`
+    SELECT * FROM got
+    WHERE got.user_id = $1
+    ` [user_id]);
+}
+
 Got.create = (got, id) => {
   return db.one(`
   INSERT INTO got
   (name, user_id)
   VALUES ($1, $2)
   RETURNING *
-    `, [got.name, got.house, got.actor_name, id]);
+    `, [got.name, id]);
 }
 
 Got.update = (got, id) => {
@@ -35,7 +42,7 @@ Got.update = (got, id) => {
   name = $1,
   WHERE id = $2
   RETURNING *
-    ` [got.name, got.house, got.actor_name, id]);
+    ` [got.name, id]);
 }
 
 Got.destroy = (id) => {
