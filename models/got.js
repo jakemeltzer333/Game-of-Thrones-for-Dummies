@@ -5,6 +5,7 @@ const Got= {};
 Got.findAll = () => {
   return db.query(`
     SELECT * FROM got
+    ORDER BY id ASC
     `);
 }
 
