@@ -8,12 +8,12 @@ Got.findAll = () => {
     `);
 }
 
-// Got.findByUserId = (user_id) => {
-//   return db.one(`
-//     SELECT * FROM got
-//     WHERE user_id = $1
-//     ` [user_id]);
-// }
+Got.findById = (id) => {
+  return db.one(`
+    SELECT * FROM got
+    WHERE id = $1
+    `, [id]);
+}
 
 Got.create = (got, userid) => {
   return db.one(`

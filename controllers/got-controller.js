@@ -21,21 +21,19 @@ gotController.index = (req, res) => {
     })
 };
 
-// gotController.show = (req, res) => {
-
-//   Got.findByUserId(req.params.id)
-//     .then(got => {
-
-//       res.render('/got', {
-//         currentPage: 'show',
-//         message: 'ok',
-//         data: got,
-//       });
-//     }).catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// };
+gotController.show = (req, res) => {
+  Got.findById(req.params.id)
+    .then(got => {
+      res.render('got/got-single', {
+        currentPage: 'show',
+        message: 'ok',
+        data: got,
+      });
+    }).catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+};
 
 gotController.create = (req, res) => {
   console.log('inside create controller ', req.user.id)
