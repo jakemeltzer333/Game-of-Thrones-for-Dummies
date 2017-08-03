@@ -8,20 +8,20 @@ Got.findAll = () => {
     `);
 }
 
-Got.findByUserId = (user_id) => {
-  return db.one(`
-    SELECT * FROM got
-    WHERE user_id = $1
-    ` [user_id]);
-}
+// Got.findByUserId = (user_id) => {
+//   return db.one(`
+//     SELECT * FROM got
+//     WHERE user_id = $1
+//     ` [user_id]);
+// }
 
-Got.create = (got, id) => {
+Got.create = (got, userid) => {
   return db.one(`
   INSERT INTO got
   (name, user_id)
   VALUES ($1, $2)
   RETURNING *
-    `, [got.name, id]);
+    `, [got.name, userid]);
 }
 
 Got.update = (got, id) => {

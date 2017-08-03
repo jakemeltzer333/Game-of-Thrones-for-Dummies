@@ -19,9 +19,9 @@ User.create = user => {
 };
 
 User.findByUserId = id => {
-  return db.one(`
-    SELECT * FROM users
-    WHERE id = $1
+  return db.manyOrNone(`
+    SELECT * FROM got
+    WHERE user_id = $1
     `, [id]);
 };
 

@@ -5,9 +5,13 @@ const usersController = {};
 
 usersController.index = (req, res) => {
   User.findByUserId(req.user.id)
-    .then(got => {
-      res.redirect('/got');
-    }).catch(err => {
+  .then(got => {
+    res.render('got/got-index', {
+        currentPage: 'index',
+        message: 'ok',
+        data: got,
+      });
+  }).catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
