@@ -40,7 +40,7 @@ gotController.create = (req, res) => {
   Got.create({
     name: req.body.name,
   }, req.user.id).then(() => {
-    res.redirect('/got');
+    res.redirect('/user');
   }).catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -48,10 +48,20 @@ gotController.create = (req, res) => {
 };
 
 gotController.update = (req, res) => {
+  console.log('made it');
   Got.update({
-    name: req.body.name,
-  }).then (got => {
-    res.redirect(`/got/${req.params.id}`);
+    culture: req.body.culture,
+    titles: req.body.titles,
+    aliases: req.body.aliases,
+    father: req.body.father,
+    mother: req.body.mother,
+    allegiances: req.body.allegiances,
+    playedBy: req.body.playedBy,
+  }, req.params.id).then (got => {
+    console.log(got);
+    res.render('got/got-single', {
+      data: got,
+    });
   }).catch(err => {
     console.log(err);
     res.status(500).json(err);

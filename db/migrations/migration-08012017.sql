@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS users (
 CREATE TABLE IF NOT EXISTS got (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
-  user_id INTEGER REFERENCES users(id) NOT NULL
+  user_id INTEGER REFERENCES users(id) NOT NULL,
   culture VARCHAR(255),
   titles VARCHAR(255),
   aliases VARCHAR(255),

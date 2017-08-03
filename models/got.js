@@ -27,10 +27,16 @@ Got.create = (got, userid) => {
 Got.update = (got, id) => {
   return db.one(`
   UPDATE got SET
-  name = $1,
-  WHERE id = $2
+  culture = $1,
+  titles = $2,
+  aliases = $3,
+  father = $4,
+  mother = $5,
+  allegiances = $6,
+  playedBy = $7
+  WHERE id = $8
   RETURNING *
-    ` [got.name, id]);
+    `, [got.culture, got.titles, got.aliases, got.father, got.mother, got.allegiances, got.playedBy, id]);
 }
 
 Got.destroy = (id) => {
