@@ -83,6 +83,25 @@ body {
   margin-top: 10px;
 }
 
+.got-single-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.linkback {
+  font-size: 20px;
+}
+
 input {
   display: flex;
   flex-direction: column;
