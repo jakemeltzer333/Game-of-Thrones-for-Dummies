@@ -97,7 +97,9 @@ p {
   font-size: 20px;
   padding: 10px;
 }
-
+.char-name {
+  font-size: 25px;
+}
 .linkback {
   font-size: 20px;
 }
