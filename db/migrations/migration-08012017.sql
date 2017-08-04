@@ -1,4 +1,4 @@
-\c got_info_dev
+/*\c got_info_dev*/
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS got CASCADE;
 DROP TABLE IF EXISTS info CASCADE;

@@ -3,6 +3,7 @@ $(() => {
     let seeMore = $(e.target).prev().text();
     let seeMoreId = $(e.target).prev().attr('id');
     console.log(seeMore);
+    console.log('live on heroku!')
     $.ajax({
       url: `https://anapioficeandfire.com/api/characters/?name=${seeMore}`,
       method: 'GET',
