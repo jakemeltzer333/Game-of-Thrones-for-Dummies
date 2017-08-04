@@ -6,6 +6,16 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: -10;
+}
+
+#overall {
+  z-index: -5;
+  position: absolute;
+  min-height: 100vh;
+  min-width: 100vw;
+  color: black;
 }
 
 .container {
@@ -67,19 +77,21 @@ body {
 .header {
   font-size: 40px;
   padding: 10px;
-  color: #c0c0c0;
+  color: #a9a9a9;
+  font-family: 'Medieval Sharp', cursive;
 
 }
 
 .name {
   font-size: 30px;
-  color: #c0c0c0;
+  color: #a9a9a9;
+  font-family: 'Medieval Sharp', cursive;
 }
 
 .linkto {
   font-size: 20px;
   padding: 15px;
-  color: #c0c0c0;
+  color: #a9a9a9;
 }
 
 .delete {
@@ -88,20 +100,23 @@ body {
 }
 .remove {
   background-color: rgba(0, 0, 0, .5);
-  color: #c0c0c0;
+  color: #a9a9a9;
   border: 2px solid #00487f;
+  font-family: 'Medieval Sharp', cursive;
 }
 
 .add {
   font-size: 20px;
   padding: 10px;
-  color: #c0c0c0;
+  color: #a9a9a9;
+  font-family: 'Medieval Sharp', cursive;
 }
 
 .logout {
   font-size: 20px;
   padding: 10px;
-  color: #c0c0c0;
+  color: #a9a9a9;
+  font-family: 'Medieval Sharp', cursive;
 }
 
 .add-container {
@@ -127,14 +142,14 @@ body {
 p {
   font-size: 30px;
   padding: 15px;
-  color: #c0c0c0;
+  color: #a9a9a9;
 }
 .char-name {
   font-size: 40px;
 }
 .seeall {
   font-size: 20px;
-  color: #c0c0c0;
+  color: #a9a9a9;
 }
 
 input {
