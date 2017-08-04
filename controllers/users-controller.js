@@ -10,6 +10,7 @@ usersController.index = (req, res) => {
         currentPage: 'index',
         message: 'ok',
         data: got,
+        user: req.user,
       });
   }).catch(err => {
       console.log(err);
