@@ -110,13 +110,18 @@ body {
   padding: 10px;
   color: #a9a9a9;
   font-family: 'Medieval Sharp', cursive;
+  background-color: rgba(0,0,0,.5);
+  border: 2px solid #00487f;
+
 }
 
 .logout {
   font-size: 20px;
-  padding: 10px;
+  padding: 15px;
   color: #a9a9a9;
   font-family: 'Medieval Sharp', cursive;
+  background-color: rgba(0,0,0,.5);
+
 }
 
 .add-container {
@@ -127,6 +132,12 @@ body {
   justify-content: center;
   text-align: center;
   margin-top: 10px;
+}
+
+.add-submit {
+  border: 2px solid #00487f;
+  color: #a9a9a9;
+  background-color: rgba(0,0,0,.5);
 }
 
 .got-single-container {
@@ -161,7 +172,7 @@ input {
 }
 
 footer {
-  flex: 1;
+  flex: .33;
   display: flex;
   flex-direction: column;
   align-items: center;
