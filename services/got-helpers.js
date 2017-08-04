@@ -19,8 +19,37 @@ function getAllegiance (req, res, next) {
     })
   }
 
+function getFather (req, res, next) {
+  let father = req.body.father;
+  fetch(father)
+    .then(fetchRes => {
+      return fetchRes.json();
+    })
+    .then(jsonFetchRes => {
+      res.locals.father = jsonFetchRes.name;
+      next();
+    }).catch(err => {
+      console.log(err);
+      next();
+    })
+}
 
-
+function getMother (req, res, next) {
+  let mother = req.body.mother;
+  fetch(mother)
+  .then(fetchRes => {
+    return fetchRes.json();
+  })
+  .then(jsonFetchRes => {
+    res.locals.mother = jsonFetchRes.name;
+    next();
+  }).catch(err => {
+    console.log(err);
+    next();
+  })
+}
 module.exports = {
   getAllegiance,
+  getFather,
+  getMother
 }

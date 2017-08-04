@@ -17,7 +17,8 @@ gotRoutes.get('/add', authHelpers.loginRequired, (req, res) => {
 
 gotRoutes.get('/:id', authHelpers.loginRequired, gotController.show);
 //gotRoutes.get('/:id/edit', authHelpers.loginRequired, gotController.edit);
-gotRoutes.post('/:id', authHelpers.loginRequired, gotHelpers.getAllegiance, gotController.update);
+gotRoutes.post('/:id', authHelpers.loginRequired, gotHelpers.getAllegiance, gotHelpers.getFather, gotHelpers.getMother,
+  gotController.update);
 gotRoutes.delete('/:id', authHelpers.loginRequired, gotController.delete);
 
 module.exports = gotRoutes;

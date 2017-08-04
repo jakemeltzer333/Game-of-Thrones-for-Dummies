@@ -55,8 +55,8 @@ gotController.update = (req, res) => {
     culture: req.body.culture,
     titles: req.body.titles,//[randTitle],
     aliases: req.body.aliases,//[randAlias],
-    father: req.body.father,
-    mother: req.body.mother,
+    father: res.locals.father,
+    mother: res.locals.mother,
     allegiances: res.locals.allegiance,
     playedBy: req.body.playedBy,
   }, req.params.id).then (got => {
