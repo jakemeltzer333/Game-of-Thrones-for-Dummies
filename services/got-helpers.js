@@ -3,6 +3,7 @@ console.log('i exist');
 
 function getAllegiance (req, res, next) {
   let allegiance = req.body.allegiances;
+  console.log(req.body.allegiances);
   console.log(allegiance);
   fetch(allegiance)
     .then(fetchRes => {
@@ -17,6 +18,8 @@ function getAllegiance (req, res, next) {
       next();
     })
   }
+
+
 
 module.exports = {
   getAllegiance,

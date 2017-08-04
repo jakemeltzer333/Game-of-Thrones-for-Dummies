@@ -20,7 +20,9 @@ $(() => {
           allegiances: data[0].allegiances[0],
           playedBy: data[0].playedBy[0]
         }
-
+        if ($('.got-single p').text() === '') {
+          console.log('its empty');
+        }
         sendToDB(got, seeMore, seeMoreId);
       }
     })
