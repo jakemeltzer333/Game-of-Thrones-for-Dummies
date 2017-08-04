@@ -3,8 +3,8 @@ console.log('i exist');
 
 function getAllegiance (req, res, next) {
   let allegiance = req.body.allegiances;
-  console.log(req.body.allegiances);
-  console.log(allegiance);
+  // console.log(req.body.allegiances);
+  // console.log(allegiance);
   fetch(allegiance)
     .then(fetchRes => {
       return fetchRes.json();

@@ -2,6 +2,10 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: url(http://ll-c.ooyala.com/e1/U3d3duYjE6IP4_anJWRVn9mOBEO5I7FQ/promo322342056);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -52,10 +56,18 @@ body {
 .header {
   font-size: 40px;
   padding: 10px;
+  color: #c0c0c0;
 }
 
 .name {
   font-size: 30px;
+  color: #c0c0c0;
+}
+
+.linkto {
+  font-size: 20px;
+  padding: 10px;
+  color: #c0c0c0;
 }
 
 .delete {
@@ -66,11 +78,13 @@ body {
 .add {
   font-size: 20px;
   padding: 10px;
+  color: #c0c0c0;
 }
 
 .logout {
   font-size: 20px;
   padding: 10px;
+  color: #c0c0c0;
 }
 
 .add-container {
