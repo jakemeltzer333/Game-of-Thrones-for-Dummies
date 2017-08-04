@@ -2,7 +2,7 @@ require ('isomorphic-fetch');
 console.log('i exist');
 
 function getAllegiance (req, res, next) {
-  let allegiance = req.body.allegiances[0];
+  let allegiance = req.body.allegiances;
 
   fetch(allegiance)
     .then(fetchRes => {
