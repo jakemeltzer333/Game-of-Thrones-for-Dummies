@@ -34,13 +34,24 @@ body {
 }
 
 .message {
-  font-size: 40px;
+  font-size: 65px;
   padding: 10px;
+  font-family: 'Medieval Sharp', cursive;
+  color: #c0c0c0;
 }
 
 .login {
   font-size: 30px;
   padding: 10px;
+  color: #c0c0c0;
+}
+
+.register {
+  color: #c0c0c0;
+}
+
+.log {
+  color: #c0c0c0;
 }
 
 .got-container {
@@ -57,6 +68,7 @@ body {
   font-size: 40px;
   padding: 10px;
   color: #c0c0c0;
+
 }
 
 .name {
@@ -66,13 +78,18 @@ body {
 
 .linkto {
   font-size: 20px;
-  padding: 10px;
+  padding: 15px;
   color: #c0c0c0;
 }
 
 .delete {
-  font-size: 20px;
-  padding: 15px;
+  font-size: 15px;
+  padding: 10px;
+}
+.remove {
+  background-color: rgba(0, 0, 0, .5);
+  color: #c0c0c0;
+  border: 2px solid #00487f;
 }
 
 .add {
@@ -108,14 +125,16 @@ body {
 }
 
 p {
-  font-size: 20px;
-  padding: 10px;
+  font-size: 30px;
+  padding: 15px;
+  color: #c0c0c0;
 }
 .char-name {
-  font-size: 25px;
+  font-size: 40px;
 }
-.linkback {
+.seeall {
   font-size: 20px;
+  color: #c0c0c0;
 }
 
 input {
@@ -134,4 +153,6 @@ footer {
   justify-content: center;
   text-align: center;
   margin-top: 10px;
+  color: #c0c0c0;
+  border-top: 2px solid #00487f;
 }
