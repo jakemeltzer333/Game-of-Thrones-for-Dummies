@@ -39,9 +39,7 @@ body {
   font-size: 30px;
 }
 
-.title {
-  display: flex;
-}
+.title {display: flex;}
 
 .message {
   font-size: 65px;
@@ -56,15 +54,9 @@ body {
   color: #c0c0c0;
 }
 
-.register {
-  color: #c0c0c0;
-}
+.register, .log {color: #c0c0c0;}
 
-.log {
-  color: #c0c0c0;
-}
-
-.got-container {
+.got-container, .add-container, .got-single-container {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -79,7 +71,6 @@ body {
   padding: 10px;
   color: #a9a9a9;
   font-family: 'Medieval Sharp', cursive;
-
 }
 
 .name {
@@ -92,13 +83,15 @@ body {
   font-size: 20px;
   padding: 15px;
   color: #a9a9a9;
+  font-family: 'Medieval Sharp', cursive;
 }
 
 .delete {
   font-size: 15px;
   padding: 10px;
 }
-.remove {
+
+.remove, .add-name, .add-submit {
   background-color: rgba(0, 0, 0, .5);
   color: #a9a9a9;
   border: 2px solid #00487f;
@@ -112,7 +105,7 @@ body {
   font-family: 'Medieval Sharp', cursive;
   background-color: rgba(0,0,0,.5);
   border: 2px solid #00487f;
-
+  text-decoration: none;
 }
 
 .logout {
@@ -121,46 +114,23 @@ body {
   color: #a9a9a9;
   font-family: 'Medieval Sharp', cursive;
   background-color: rgba(0,0,0,.5);
-
-}
-
-.add-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.add-submit {
-  border: 2px solid #00487f;
-  color: #a9a9a9;
-  background-color: rgba(0,0,0,.5);
-}
-
-.got-single-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 10px;
+  text-decoration: none;
 }
 
 p {
   font-size: 30px;
+  font-family: 'Medieval Sharp', cursive;
   padding: 15px;
   color: #a9a9a9;
 }
 .char-name {
   font-size: 40px;
+  text-decoration: underline;
 }
 .seeall {
   font-size: 20px;
   color: #a9a9a9;
+  font-family: 'Medieval Sharp', cursive;
 }
 
 input {
@@ -181,4 +151,5 @@ footer {
   margin-top: 10px;
   color: #c0c0c0;
   border-top: 2px solid #00487f;
+  font-family: 'Medieval Sharp', cursive;
 }

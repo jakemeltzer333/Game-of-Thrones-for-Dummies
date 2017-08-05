@@ -48,19 +48,15 @@ gotController.create = (req, res) => {
 };
 
 gotController.update = (req, res) => {
-  console.log('made it');
-  // let randTitle = req.body.titles[Math.round(Math.random() * req.body.titles.length)];
-  // let randAlias = req.body.aliases[Math.round(Math.random() * req.body.aliases.length)];
   Got.update({
     culture: req.body.culture,
-    titles: req.body.titles,//[randTitle],
-    aliases: req.body.aliases,//[randAlias],
+    titles: req.body.titles,
+    aliases: req.body.aliases,
     father: res.locals.father,
     mother: res.locals.mother,
     allegiances: res.locals.allegiance,
     playedBy: req.body.playedBy,
   }, req.params.id).then (got => {
-    console.log(got);
     res.render('got/got-single', {
       data: got,
     });

@@ -1,5 +1,4 @@
 require ('isomorphic-fetch');
-console.log('i exist');
 
 function getAllegiance (req, res, next) {
   let allegiance = req.body.allegiances;
