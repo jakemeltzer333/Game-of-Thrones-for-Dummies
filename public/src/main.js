@@ -10,15 +10,24 @@ $(() => {
       url: `https://anapioficeandfire.com/api/characters/?name=${seeMore}`,
       method: 'GET',
       success: (data) => {
+        //in the API, Daenerys from the show is the second entry when her
+        //name is typed. So I created an if statement so that when user
+        //enters her name, the correct info will appear.
         let info = data[0];
         if (seeMore === 'daenerys targaryen') {
           info = data[1];
         }
+        //since titles and aliases are arrays in API, setting these
+        //variables allow me to pull a random value from the array of
+        //titles/aliases.
+        let randTitle = Math.round(Math.random() * info.titles.length);
+        let randAlias = Math.round(Math.random() * info.aliases.length);
+
         const got = {
 
           culture: info.culture,
-          titles: info.titles[0],
-          aliases: info.aliases[0],
+          titles: info.titles[randTitle],
+          aliases: info.aliases[randAlias],
           father: info.father,
           mother: info.mother,
           allegiances: info.allegiances[0],
