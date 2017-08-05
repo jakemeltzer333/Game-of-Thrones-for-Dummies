@@ -2,23 +2,27 @@ $(() => {
   //create event listener that when link is clicked, the name entered previously
   //will be read and sent to the API.
   $('.linkto').click((e) => {
-    let seeMore = $(e.target).prev().text();
+    let seeMore = $(e.target).prev().text().toLowerCase();
     let seeMoreId = $(e.target).prev().attr('id');
+
     //Initial API call to retrieve all the data I want.
     $.ajax({
       url: `https://anapioficeandfire.com/api/characters/?name=${seeMore}`,
       method: 'GET',
       success: (data) => {
-
+        let info = data[0];
+        if (seeMore === 'daenerys targaryen') {
+          info = data[1];
+        }
         const got = {
 
-          culture: data[0].culture,
-          titles: data[0].titles[0],
-          aliases: data[0].aliases[0],
-          father: data[0].father,
-          mother: data[0].mother,
-          allegiances: data[0].allegiances[0],
-          playedBy: data[0].playedBy[0]
+          culture: info.culture,
+          titles: info.titles[0],
+          aliases: info.aliases[0],
+          father: info.father,
+          mother: info.mother,
+          allegiances: info.allegiances[0],
+          playedBy: info.playedBy[0]
         }
         sendToDB(got, seeMore, seeMoreId);
       }
