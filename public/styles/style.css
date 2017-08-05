@@ -15,7 +15,7 @@ body {
   position: absolute;
   min-height: 100vh;
   min-width: 100vw;
-  color: black;
+  background: rgba(0,0,0,.5);
 }
 
 .container {
