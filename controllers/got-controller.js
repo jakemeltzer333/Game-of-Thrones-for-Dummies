@@ -73,7 +73,7 @@ gotController.update = (req, res) => {
 gotController.delete = (req, res) => {
   Got.destroy(req.params.id)
     .then(() => {
-      res.redirect('/got');
+      res.redirect('/user');
     }).catch(err => {
     console.log(err);
     res.status(500).json(err);
