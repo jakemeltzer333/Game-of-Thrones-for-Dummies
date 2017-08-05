@@ -1,7 +1,8 @@
+//require the models
 const Got = require('../models/got');
 
 const gotController = {};
-
+//renders the got-index view and filters the view by user
 gotController.index = (req, res) => {
   Got.findAll()
     .then(got => {
@@ -20,7 +21,7 @@ gotController.index = (req, res) => {
       res.status(500).json(err);
     })
 };
-
+//renders the got-single view
 gotController.show = (req, res) => {
   Got.findById(req.params.id)
     .then(got => {
@@ -34,7 +35,7 @@ gotController.show = (req, res) => {
       res.status(500).json(err);
     });
 };
-
+//shows the list of character names created by each user
 gotController.create = (req, res) => {
   console.log('inside create controller ', req.user.id)
   Got.create({
@@ -46,7 +47,7 @@ gotController.create = (req, res) => {
     res.status(500).json(err);
   });
 };
-
+//renders all of the information retrieved from the API in got-single view
 gotController.update = (req, res) => {
   Got.update({
     culture: req.body.culture,
@@ -65,7 +66,7 @@ gotController.update = (req, res) => {
     res.status(500).json(err);
   });
 }
-
+//User can delete a character and remain on their user page
 gotController.delete = (req, res) => {
   Got.destroy(req.params.id)
     .then(() => {
