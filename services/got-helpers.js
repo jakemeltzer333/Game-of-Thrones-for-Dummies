@@ -1,9 +1,10 @@
+//require fetch
 require ('isomorphic-fetch');
-
+//middleware helper that makes a fetch call to get name of character's
+//allegiance from the API.
 function getAllegiance (req, res, next) {
   let allegiance = req.body.allegiances;
-  // console.log(req.body.allegiances);
-  // console.log(allegiance);
+
   fetch(allegiance)
     .then(fetchRes => {
       return fetchRes.json();
@@ -17,7 +18,8 @@ function getAllegiance (req, res, next) {
       next();
     })
   }
-
+//middleware helper that makes a fetch call to get name of character's
+//father from the API.
 function getFather (req, res, next) {
   let father = req.body.father;
   fetch(father)
@@ -32,7 +34,8 @@ function getFather (req, res, next) {
       next();
     })
 }
-
+//middleware helper that makes a fetch call to get name of character's
+//mother from the API.
 function getMother (req, res, next) {
   let mother = req.body.mother;
   fetch(mother)
@@ -47,6 +50,7 @@ function getMother (req, res, next) {
     next();
   })
 }
+//export helper functions to my routes.
 module.exports = {
   getAllegiance,
   getFather,

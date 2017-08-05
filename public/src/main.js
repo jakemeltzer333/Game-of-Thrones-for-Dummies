@@ -1,7 +1,10 @@
 $(() => {
+  //create event listener that when link is clicked, the name entered previously
+  //will be read and sent to the API.
   $('.linkto').click((e) => {
     let seeMore = $(e.target).prev().text();
     let seeMoreId = $(e.target).prev().attr('id');
+    //Initial API call to retrieve all the data I want.
     $.ajax({
       url: `https://anapioficeandfire.com/api/characters/?name=${seeMore}`,
       method: 'GET',
@@ -21,7 +24,8 @@ $(() => {
       }
     })
   })
-
+  //function that allows the data retrieved from the API to render on the
+  //single page.
   const sendToDB = (got, seeMore, seeMoreId) => {
     $.ajax({
       url: `/got/${seeMoreId}`,

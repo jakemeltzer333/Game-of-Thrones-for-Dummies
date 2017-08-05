@@ -8,11 +8,12 @@ body {
   background-repeat: no-repeat;
   position: relative;
   z-index: -10;
+  background-attachment: fixed;
 }
 
 #overall {
   z-index: -5;
-  position: absolute;
+  position: fixed;
   min-height: 100vh;
   min-width: 100vw;
   background: rgba(0,0,0,.5);
