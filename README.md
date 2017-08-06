@@ -10,13 +10,13 @@
 ![register](./project2wireframes/IMG_0808.JPG)
 
 ### Main Character List Index
-![character-index](./projectwireframes/IMG_0815.JPG)
+![character-index](./project2wireframes/IMG_0815.JPG)
 
 ### Add a character to your list
 ![got-add](./project2wireframes/IMG_0811.JPG)
 
 ### Single Character View
-![got-single](./projectwireframe/IMG_0816.JPG)
+![got-single](./project2wireframe/IMG_0816.JPG)
 
 ## What is Game of Thrones For Dummies?
 
