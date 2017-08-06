@@ -10,9 +10,10 @@ $(() => {
       url: `https://anapioficeandfire.com/api/characters/?name=${seeMore}`,
       method: 'GET',
       success: (data) => {
-        //in the API, Daenerys from the show is the second entry when her
-        //name is typed. So I created an if statement so that when user
-        //enters her name, the correct info will appear.
+        //in the API, Daenerys from the show is the second entry in an array of
+        //characters with that name.
+        //So I created an if statement so that when user
+        //enters her name, her info will appear instead of the first Daenerys.
         let info = data[0];
         if (seeMore === 'daenerys targaryen') {
           info = data[1];
