@@ -74,4 +74,92 @@ I set up the functionality of this app primarily through Node.js and the Express
 
 In order to make my API calls, I used both the `Ajax` and `fetch` methods. I used ajax to make my initial API call to return all the information I wanted for each character. However, some of these character traits, such as allegiances, required another API call to be made to retrieve the name of that allegiance. For this, I used fetch, setting up helper functions retrieve that data and render it on the page as a string instead of as a link, which would've been the case if I had just made my ajax call.
 
-I used CSS for styling the page and instead of HTML, I used 'EJS' to provide the layout of my pages. This allowed me to use simple loops and if statements to control which data I wanted to render on each page.    
+I used CSS for styling the page and instead of HTML, I used 'EJS' to provide the layout of my pages. This allowed me to use simple loops and if statements to control which data I wanted to render on each page.
+
+## Code Examples
+
+Below is my inital `Ajax` call to the API to retrieve the data I wanted. The API takes a character name as a value when you enter it, so I made and event listener on the 'See More Info' link where I would target the text of the previous element, in this case the character name, and that would be entered into the url I wanted to make the API call to.
+
+```
+$(() => {
+  //create event listener that when link is clicked, the name entered previously
+  //will be read and sent to the API.
+  $('.linkto').click((e) => {
+    let seeMore = $(e.target).prev().text().toLowerCase();
+    let seeMoreId = $(e.target).prev().attr('id');
+
+    //Initial API call to retrieve all the data I want.
+    $.ajax({
+      url: `https://anapioficeandfire.com/api/characters/?name=${seeMore}`,
+      method: 'GET',
+      success: (data) => {
+        //in the API, Daenerys from the show is the second entry in an array of
+        //characters with that name.
+        //So I created an if statement so that when user
+        //enters her name, her info will appear instead of the first Daenerys.
+        let info = data[0];
+        if (seeMore === 'daenerys targaryen') {
+          info = data[1];
+        }
+        //since titles and aliases are arrays in API, setting these
+        //variables allow me to pull a random value from the array of
+        //titles/aliases.
+        let randTitle = Math.round(Math.random() * info.titles.length);
+        let randAlias = Math.round(Math.random() * info.aliases.length);
+
+        const got = {
+
+          culture: info.culture,
+          titles: info.titles[randTitle],
+          aliases: info.aliases[randAlias],
+          father: info.father,
+          mother: info.mother,
+          allegiances: info.allegiances[0],
+          playedBy: info.playedBy[0]
+        }
+        sendToDB(got, seeMore, seeMoreId);
+      }
+    })
+  })
+  //function that allows the data retrieved from the API to render on the
+  //single page.
+  const sendToDB = (got, seeMore, seeMoreId) => {
+    $.ajax({
+      url: `/got/${seeMoreId}`,
+      method: 'POST',
+      data: got,
+      success: () => {
+        console.log('success!');
+      }
+    }).done (data => {
+      window.location = `/got/${seeMoreId}`;
+    })
+  }
+})
+```    
+I also did a couple of other things to improve the quality of the data returned by the API. I noticed that when I searched 'Daenerys Targaryen' in the API, it returned two characters with that name, and the one from the show was the second character returned from the API. Each API entry is a large object located within a larger array, so in this case the Daenerys I wanted was the second element of the array, and since I'm anticipating many users typing in her name to learn more about her, I created a simple if statement to say that if a user types in her name, when the API makes its call, it will return `index[1]` of that array.
+
+Another interesting thing about the API is that each character's titles and aliases are located in their own arrays, and since some of these values are more book-specific than show-specific, I decided I wanted to randomize which title or alias is returned for any given character, so I created variables to do just that and added them as the index number I wanted to call for the title and alias of each character that will appear on the page.
+
+I also wanted to show one of my helper functions I made with `fetch`:
+
+```
+function getAllegiance (req, res, next) {
+  let allegiance = req.body.allegiances;
+
+  fetch(allegiance)
+    .then(fetchRes => {
+      return fetchRes.json();
+    })
+    .then(jsonFetchRes => {
+      console.log(jsonFetchRes);
+      res.locals.allegiance = jsonFetchRes.name;
+      next();
+    }).catch(err => {
+      console.log(err);
+      next();
+    })
+  }
+```
+As I mentioned earlier, in the API, a character's allegiance (i.e. house) appears as a link to another entry in the API. So what I did here was fetch the url of that allegiance that comes from the `Ajax` call and feed that into the fetch. From there, I only want the name of that house, so when it renders as `res.locals.allegiance`, when I make that API call, I only want to return the name of that allegiance and show that instead of the API link.
+
