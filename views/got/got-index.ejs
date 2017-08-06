@@ -6,7 +6,7 @@
 
     <% for (let got of data) { %>
         <h2 class = 'name' id = '<%= got.id %>'><%= got.name %></h2>
-        <a class = 'linkto' href='#'>See More</a>
+        <a class = 'linkto' href='#'>More Info</a>
         <form class = 'delete' method = 'POST' action = '/got/<%= got.id %>?_method=DELETE'>
           <input class = 'remove' type='submit' value='Delete (Valar Morghulis)'>
         </form>
