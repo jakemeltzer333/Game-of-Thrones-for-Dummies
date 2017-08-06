@@ -163,3 +163,10 @@ function getAllegiance (req, res, next) {
 ```
 As I mentioned earlier, in the API, a character's allegiance (i.e. house) appears as a link to another entry in the API. So what I did here was fetch the url of that allegiance that comes from the `Ajax` call and feed that into the fetch. From there, I only want the name of that house, so when it renders as `res.locals.allegiance`, when I make that API call, I only want to return the name of that allegiance and show that instead of the API link.
 
+### Possible Future Fixes or Additions
+
+In terms of my app's functionality, it does exactly what I want it to do. The only bummer is that the API a little limited in what it can search for. It can only search for characters, houses, and books and not for specific events or regions or places. If it could do that, my app would be incredible! The API is also not updated for season 7 of the show, so some of the information is either absent or not up to date, so I wish that either the creator of the API would go back in and update some of the info for the show's biggest characters or I would go in and do it myself (it is open source, after all). It would be nice if I could target specific information in the API for certain characters. Also, it would be awesome to provide links to their more detailed character pages on the Wiki of Ice and Fire if a user wants to learn more than just the basics of their character.
+
+### Downloading the Code & Running it on Localhost
+
+Clone this github repo to your terminal then open it up in your text editor (Sublime, Atom, VS, etc.). If you do not have the npms used in this app's `package.json` file, run `npm install --save` and then list all of the npms as they are written in the `package.json` in this repo in your terminal. Once that is done, type `npm run dev` in your terminal and in your browser, type `localhost:3000` in the url search bar and you can begin your journey towards understanding Game of Thrones just a little better.
