@@ -16,7 +16,7 @@
 ![got-add](./project2wireframes/IMG_0811.JPG)
 
 ### Single Character View
-![got-single](./project2wireframe/IMG_0816.JPG)
+![got-single](./project2wireframes/IMG_0816.JPG)
 
 ## What is Game of Thrones For Dummies?
 
