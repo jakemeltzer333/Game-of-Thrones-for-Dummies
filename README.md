@@ -51,4 +51,27 @@ Under the name will be two prompts: one to see more info and the other to delete
 
 If the user is either confident they know enough about the character or he or she does not want too many characters in their list at once, each character has a 'Delete' button that will remove that character's name from the page and the 'See More Info' and 'Delete' values that appear with each character name will no longer be on the page.
 
-When a user wants to log out, there is a link at the bottom of the page stating 'Until Next Time..The Night is Dark and Full of Terrors.' Users can click on that link and they will be return to the app's home screen where they can log in again if they choose. 
+When a user wants to log out, there is a link at the bottom of the page stating 'Until Next Time..The Night is Dark and Full of Terrors.' Users can click on that link and they will be return to the app's home screen where they can log in again if they choose.
+
+## Technologies Used
+
+I set up the functionality of this app primarily through Node.js and the Express framework. I also used several node package modules (npms) to help with certain actions the app needed to run as well as for user authentication.
+
+### List of NPMs used in this project
+    `bcryptjs`
+    `body-parser`
+    `cookie-parser`
+    `dotenv`
+    `ejs`
+    `express`
+    `express-session`
+    `isomorphic-fetch`
+    `method-override`
+    `morgan`
+    `passport`
+    `passport-local`
+    `pg-promise`
+
+In order to make my API calls, I used both the `Ajax` and `fetch` methods. I used ajax to make my initial API call to return all the information I wanted for each character. However, some of these character traits, such as allegiances, required another API call to be made to retrieve the name of that allegiance. For this, I used fetch, setting up helper functions retrieve that data and render it on the page as a string instead of as a link, which would've been the case if I had just made my ajax call.
+
+I used CSS for styling the page and instead of HTML, I used 'EJS' to provide the layout of my pages. This allowed me to use simple loops and if statements to control which data I wanted to render on each page.    
