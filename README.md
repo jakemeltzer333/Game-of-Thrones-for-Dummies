@@ -32,6 +32,8 @@ My app will allow these casual viewers and those who have not seen the show who 
 The app will also have user authentication, so that each user's list will be password
 protected and they can keep their knowledge (or lack thereof) private.
 
+**Note: Any unlicensed material such as the background image used for this project is for educational purposes ONLY!** 
+
 ## How Does Game of Thrones For Dummies Work?
 
 When you go to [Game of Thrones For Dummies](gameofthronesfordummies.herokuapp.com),
