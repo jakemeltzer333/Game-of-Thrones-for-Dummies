@@ -172,4 +172,4 @@ In terms of my app's functionality, it does almost exactly what I want it to do.
 
 ### Downloading the Code & Running it on Localhost
 
-Clone this github repo to your terminal then open it up in your text editor (Sublime, Atom, VS, etc.). If you do not have the npms used in this app's `package.json` file, run `npm install --save` and then list all of the dependencies as they are written in the `package.json` for this repo in your terminal. Once that is done, type `npm run dev` in your terminal and in your browser, type `localhost:3000` in the url search bar and you can begin your journey towards understanding Game of Thrones just a little better.
+Clone this github repo to your terminal then open it up in your text editor (Sublime, Atom, VS, etc.). If you do not have the npms used in this app's `package.json` file, run `npm install` and then list all of the dependencies as they are written in the `package.json` for this repo in your terminal. Once that is done, type `npm run dev` in your terminal and in your browser, type `localhost:3000` in the url search bar and you can begin your journey towards understanding Game of Thrones just a little better.
