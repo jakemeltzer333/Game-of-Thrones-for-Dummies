@@ -27,10 +27,13 @@ $(() => {
         const got = {
 
           culture: info.culture,
+          born: info.born,
+          died: info.died,
           titles: info.titles[randTitle],
           aliases: info.aliases[randAlias],
           father: info.father,
           mother: info.mother,
+          spouse: info.spouse,
           allegiances: info.allegiances[0],
           playedBy: info.playedBy[0]
         }
