@@ -51,10 +51,13 @@ gotController.create = (req, res) => {
 gotController.update = (req, res) => {
   Got.update({
     culture: req.body.culture,
+    born: req.body.born,
+    died: req.body.died,
     titles: req.body.titles,
     aliases: req.body.aliases,
     father: res.locals.father,
     mother: res.locals.mother,
+    spouse: req.body.spouse,
     allegiances: res.locals.allegiance,
     playedBy: req.body.playedBy,
   }, req.params.id).then (got => {
