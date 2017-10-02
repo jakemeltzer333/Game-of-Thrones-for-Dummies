@@ -50,9 +50,25 @@ function getMother (req, res, next) {
     next();
   })
 }
+
+function getSpouse (req, res, next) {
+  let spouse = req.body.spouse;
+  fetch(spouse)
+  .then(fetchRes => {
+    return fetchRes.json();
+  })
+  .then(jsonFetchRes => {
+    res.locals.spouse = jsonFetchRes.name;
+    next();
+  }).catch(err => {
+    console.log(err);
+    next();
+  })
+}
 //export helper functions to my routes.
 module.exports = {
   getAllegiance,
   getFather,
-  getMother
+  getMother,
+  getSpouse
 }
