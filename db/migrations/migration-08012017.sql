@@ -1,7 +1,7 @@
+\c got_info_dev
 
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS got CASCADE;
-DROP TABLE IF EXISTS info CASCADE;
 
 CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
@@ -15,13 +15,15 @@ CREATE TABLE IF NOT EXISTS got (
   name VARCHAR(255),
   user_id INTEGER REFERENCES users(id) NOT NULL,
   culture VARCHAR(255),
-  born VARCHAR(255),
-  died VARCHAR(255),
   titles VARCHAR(255),
   aliases VARCHAR(255),
   father VARCHAR(255),
   mother VARCHAR(255),
-  spouse VARCHAR(255),
   allegiances VARCHAR(255),
   playedBy VARCHAR(255)
 );
+
+ALTER TABLE got
+  ADD COLUMN born VARCHAR(255),
+  ADD COLUMN died VARCHAR(255),
+  ADD COLUMN spouse VARCHAR(255);

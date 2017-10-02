@@ -50,7 +50,8 @@ function getMother (req, res, next) {
     next();
   })
 }
-
+//middleware helper that makes a fetch call to get name of character's
+//spouse from the API.
 function getSpouse (req, res, next) {
   let spouse = req.body.spouse;
   fetch(spouse)
