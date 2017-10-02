@@ -7,6 +7,12 @@
      <% if (data.culture) { %>
       <p>Culture: <%= data.culture %></p>
       <% } %>
+      <% if (data.born) { %>
+        <p>Born: <%= data.born %></p>
+        <% } %>
+        <% if (data.died) { %>
+          <p>Died: <%= data.died %></p>
+          <% } %>  
       <% if (data.titles) { %>
       <p>Title: <%= data.titles %></p>
      <% } %>
@@ -19,6 +25,9 @@
      <% if (data.mother) { %>
       <p>Mother: <%= data.mother %></p>
      <% } %>
+     <% if (data.spouse) { %>
+      <p>Spouse: <%= data.spouse %></p>
+      <% } %>
      <% if (data.allegiances) { %>
       <p>Allegiance: <%= data.allegiances %></p>
      <% } %>
