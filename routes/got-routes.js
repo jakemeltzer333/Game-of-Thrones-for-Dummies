@@ -16,7 +16,7 @@ gotRoutes.get('/add', authHelpers.loginRequired, (req, res) => {
 gotRoutes.get('/:id', authHelpers.loginRequired, gotController.show);
 //set up helper functions to work when user clicks 'see more' instead of api link.
 gotRoutes.post('/:id', authHelpers.loginRequired, gotHelpers.getAllegiance, gotHelpers.getFather, gotHelpers.getMother,
-  gotController.update);
+gotHelpers.getSpouse, gotController.update);
 gotRoutes.delete('/:id', authHelpers.loginRequired, gotController.delete);
 
 module.exports = gotRoutes;
