@@ -2,13 +2,9 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: url('../images/got-background.jpeg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url('../images/got-background.jpeg') center/cover no-repeat fixed;
   position: relative;
   z-index: -10;
-  background-attachment: fixed;
 }
 
 #overall {
@@ -161,4 +157,16 @@ footer {
   color: #c0c0c0;
   border-top: 2px solid #00487f;
   font-family: 'Medieval Sharp', cursive;
+}
+
+
+@media screen and (max-width: 450px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url('../images/got-background.jpeg') center/cover no-repeat;
+    position: relative;
+    z-index: -10;
+  }
 }
