@@ -4,8 +4,8 @@ body:before {
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: -10;
   background: url('../images/got-background.jpeg') no-repeat center center;
   -webkit-background-size: cover;
@@ -17,8 +17,8 @@ body:before {
 #overall {
   z-index: -5;
   position: fixed;
-  min-height: 100vh;
-  min-width: 100vw;
+  height: 100vh;
+  width: 100vw;
   background: rgba(0,0,0,.5);
 }
 
