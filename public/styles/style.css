@@ -50,7 +50,7 @@ body:before {
 .message {
   font-size: 65px;
   padding: 10px;
-  font-family: 'Medieval Sharp', cursive;
+  font-family: 'MedievalSharp', cursive;
   color: #c0c0c0;
 }
 
@@ -58,7 +58,7 @@ body:before {
   font-size: 30px;
   padding: 10px;
   color: #c0c0c0;
-  font-family: 'Medieval Sharp', cursive;
+  font-family: 'MedievalSharp', cursive;
 }
 
 /* .register, .log {color: #c0c0c0;} */
@@ -74,7 +74,7 @@ body:before {
 }
 
 .welcome {
-  font-family: 'Medieval Sharp', cursive;
+  font-family: 'MedievalSharp', cursive;
   font-size: 40px;
   padding: 10px;
   color: #a9a9a9;
@@ -84,20 +84,20 @@ body:before {
   font-size: 40px;
   padding: 10px;
   color: #a9a9a9;
-  font-family: 'Medieval Sharp', cursive;
+  font-family: 'MedievalSharp', cursive;
 }
 
 .name {
   font-size: 30px;
   color: #a9a9a9;
-  font-family: 'Medieval Sharp', cursive;
+  font-family: 'MedievalSharp', cursive;
 }
 
 .linkto {
   font-size: 20px;
   padding: 15px;
   color: #a9a9a9;
-  font-family: 'Medieval Sharp', cursive;
+  font-family: 'MedievalSharp', cursive;
 }
 
 .delete {
@@ -109,14 +109,14 @@ body:before {
   background-color: rgba(0, 0, 0, .5);
   color: #a9a9a9;
   border: 2px solid #00487f;
-  font-family: 'Medieval Sharp', cursive;
+  font-family: 'MedievalSharp', cursive;
 }
 
 .add {
   font-size: 20px;
   padding: 10px;
   color: #a9a9a9;
-  font-family: 'Medieval Sharp', cursive;
+  font-family: 'MedievalSharp', cursive;
   background-color: rgba(0,0,0,.5);
   border: 2px solid #00487f;
   text-decoration: none;
@@ -126,7 +126,7 @@ body:before {
   font-size: 20px;
   padding: 15px;
   color: #a9a9a9;
-  font-family: 'Medieval Sharp', cursive;
+  font-family: 'MedievalSharp', cursive;
   background-color: rgba(0,0,0,.5);
   text-decoration: none;
   margin-top: 15px;
@@ -135,7 +135,7 @@ body:before {
 
 p {
   font-size: 30px;
-  font-family: 'Medieval Sharp', cursive;
+  font-family: 'MedievalSharp', cursive;
   padding: 15px;
   color: #a9a9a9;
 }
@@ -146,7 +146,7 @@ p {
 .seeall {
   font-size: 20px;
   color: #a9a9a9;
-  font-family: 'Medieval Sharp', cursive;
+  font-family: 'MedievalSharp', cursive;
 }
 
 input {
@@ -157,7 +157,7 @@ input {
   font-size: 20px;
 }
 
-@media screen and (max-width: 450px) {
+/* @media screen and (max-width: 450px) {
   .message {
     font-size: 5em;
   }
@@ -202,4 +202,4 @@ input {
   .seeall {
     font-size: 3em;
   }
-}
+} */
