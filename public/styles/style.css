@@ -25,24 +25,24 @@ body:before {
 }
 
 .container {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 80px;
+  height: 100vh;
+  width: 100vw;
 }
 
 .got-login-container, .got-register-container {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 10px;
   font-size: 30px;
+  height: 100vh;
+  width: 100vw;
 }
 
 .title {display: flex;}
@@ -64,13 +64,13 @@ body:before {
 .register, .log {color: #c0c0c0;}
 
 .got-container, .add-container, .got-single-container {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 10px;
+  height: 100vh;
+  width: 100vw;
 }
 
 .welcome {
@@ -129,6 +129,8 @@ body:before {
   font-family: 'Medieval Sharp', cursive;
   background-color: rgba(0,0,0,.5);
   text-decoration: none;
+  margin-top: 15px;
+  border: 2px solid #00487f;
 }
 
 p {
@@ -153,18 +155,5 @@ input {
   padding: 10px;
   margin: 10px;
   font-size: 20px;
-}
-
-footer {
-  flex: .33;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 10px;
-  color: #c0c0c0;
-  border-top: 2px solid #00487f;
-  font-family: 'Medieval Sharp', cursive;
 }
 
